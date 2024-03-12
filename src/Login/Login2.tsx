@@ -23,9 +23,7 @@ export function CriarConta() {
     const Navigation = useNavigation<AuthNavigateProps>();
     function handleAdvance() {
         Navigation.navigate('consing');
-        if( cpf && num === null){
-            Alert.alert('oi', 'diabo')
-        }
+ 
     }
 
     return (

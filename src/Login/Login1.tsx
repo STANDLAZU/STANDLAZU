@@ -11,6 +11,7 @@ import TxtsPng from '@assets/editImage.png';
 import FlimedWelcome from '@assets/logo_jpgFlimed.png';
 
 export function Welcome() {
+ 
     const Navigation = useNavigation<AuthNavigateProps>();
 
     function handleNewAccout() {
