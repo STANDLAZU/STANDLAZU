@@ -21,9 +21,12 @@ export function CriarConta() {
     const [cpf, setCpf] = useState('');
     const [num, setNum] = useState('');
     const Navigation = useNavigation<AuthNavigateProps>();
+    const nulo = null
     function handleAdvance() {
-        Navigation.navigate('consing');
- 
+        {cpf?      Navigation.navigate('consing') :   Alert.alert('Erro na leitura de dados','Adicione o cpf' )}
+     
+       
+
     }
 
     return (

@@ -3,7 +3,7 @@ import { ScrollView, Center, VStack, Heading, Image, Text, HStack } from 'native
 import { InputF } from 'src/Components/InputGeral';
 import { Button } from 'src/Components/Button';
 import { HeaderLog } from 'src/Components/HeaderLogin';
-import { SafeAreaView, TouchableOpacity } from 'react-native';
+import { Alert, SafeAreaView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { AuthNavigateProps } from 'src/Routes/Auth.routes';
 interface Inputprops{}
@@ -20,7 +20,9 @@ export function EmailSenha() {
     const [cpf, setCpf] = useState('');
 
     function handleAvanço() {
-        Navigation.navigate('login');
+
+        {cpf?        Navigation.navigate('login'):   Alert.alert('Erro na leitura de dados','Adicione o cpf' )}
+        
     }
 
     useEffect(() => {
