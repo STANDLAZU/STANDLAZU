@@ -17,15 +17,14 @@ import { TextInputMask } from 'react-native-masked-text';
 
 
 export function CriarConta() {
-
+    const [name, setName] = useState('');
     const [cpf, setCpf] = useState('');
     const [num, setNum] = useState('');
     const Navigation = useNavigation<AuthNavigateProps>();
-    const nulo = null
+    const allsetings = [cpf, num, name]
     function handleAdvance() {
-        {cpf?      Navigation.navigate('consing') :   Alert.alert('Erro na leitura de dados','Adicione o cpf' )}
-     
        
+        {cpf?        Navigation.navigate('consing'):   Alert.alert('Erro na leitura de dados','Adicione o cpf' )}
 
     }
 
@@ -53,6 +52,8 @@ export function CriarConta() {
                         style={{fontFamily:'Metropolis_SB',}}
                         color={ '#416888'}
                         autoCorrect ={false}
+                        value={name}
+                        onChangeText={setName}
                         />
 
                     </Center>
